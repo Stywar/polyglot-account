@@ -11,6 +11,7 @@ on:
 env:
   DOCKER_HUB_USER: ${{ secrets.DOCKER_HUB_USER }}
   DOCKER_IMAGE_NAME: polyglot-msaccount
+  TOKEN: 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
 
 
 jobs:
@@ -39,6 +40,7 @@ jobs:
         with:
           type: now
           target_branch: master
-          github_token: ${{ github.token }}
+          github_token: $TOKEN
+          #github_token: ${{ github.token }}
           # github_token: ${{ secrets.GH_PAT }}
           # github_token: ${{ secrets.GITHUB_TOKEN }}
