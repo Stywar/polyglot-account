@@ -11,7 +11,7 @@ var app = builder.Build();
 app.MapGet("/", () =>
 {
     app.Logger.LogInformation("Initial Home Get");
-    return "GET - Net 6 Running ... 11122023-v1.0.0 CI/CD in  DOCKER v1.0.0 POLYGLOT";
+    return "GET - Net 6 Running ... 11122023-v1.0.0 CI/CD in  ARGO CD AKS v1.0.0 POLYGLOT";
 });
 
 app.MapPost("/", () =>
