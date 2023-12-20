@@ -28,3 +28,19 @@ jobs:
     - name: Push the docker image
       run: docker push $DOCKER_HUB_USER/$DOCKER_IMAGE_NAME:$GITHUB_RUN_NUMBER
  
+ #merge 
+ merge-branch:
+    name: Merge to master
+    needs: docker
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Merge dev -> master
+        uses: devmasx/merge-branch@master
+        with:
+          type: now
+          target_branch: master
+          github_token: ${{ github.token }}
+          # github_token: ${{ secrets.GH_PAT }}
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
+ 
