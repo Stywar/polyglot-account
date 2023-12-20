@@ -40,7 +40,7 @@ jobs:
         with:
           type: now
           target_branch: master
-          github_token: "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"
+          github_token: ${{ secrets.TOKEN  }}
           #github_token: ${{ github.token }}
           # github_token: ${{ secrets.GH_PAT }}
           # github_token: ${{ secrets.GITHUB_TOKEN }}
